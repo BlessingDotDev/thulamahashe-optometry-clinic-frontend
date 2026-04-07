@@ -30,7 +30,6 @@ import {
   PhoneIcon,
   MapPinIcon,
   EnvelopeIcon,
-  ClockIcon,
   ChatBubbleLeftRightIcon,
 } from "@heroicons/react/24/outline";
 

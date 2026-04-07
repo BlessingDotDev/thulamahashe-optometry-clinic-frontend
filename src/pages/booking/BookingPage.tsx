@@ -20,7 +20,7 @@ function BookingPage() {
     "Eye Test",
     "Contact Lenses",
     "Glasses Consultation",
-    "Children’s Eye Care",
+    "Childrens Eye Care",
     "General Checkup",
   ];
 

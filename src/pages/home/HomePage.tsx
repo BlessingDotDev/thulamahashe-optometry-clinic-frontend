@@ -2,10 +2,9 @@ import Header from '../../components/Header';
 import Button from '../../components/Button';
 import {
   ChatBubbleLeftRightIcon,
-  MapPinIcon, PhoneIcon, DevicePhoneMobileIcon,
+  MapPinIcon, PhoneIcon,
   EnvelopeIcon, ClockIcon
 } from "@heroicons/react/24/outline";
-import { SiWhatsapp } from "react-icons/si";
 import Footer from '../../components/Footer';
 
 function HomePage() {
@@ -242,7 +241,6 @@ function HomePage() {
               <div className="md:col-span-2 flex flex-col gap-2">
                 <label className="text-sm text-white/70">Additional Notes</label>
                 <textarea
-                  rows="4" 
                   placeholder="Any special requests..."
                   className="bg-black/40 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:border-green-500 transition"
                 ></textarea>

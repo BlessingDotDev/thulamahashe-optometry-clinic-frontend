@@ -22,7 +22,6 @@ export default OurTeamPage;
 
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import Button from '../../components/Button';
 import CallToAction from '../../components/CallToAction';
 
 import {
