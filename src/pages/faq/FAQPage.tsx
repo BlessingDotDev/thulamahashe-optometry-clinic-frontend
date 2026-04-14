@@ -5,6 +5,7 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Button from '../../components/Button';
 import CallToAction from '../../components/CallToAction';
+import SharedHeroSection from '../../components/SharedHeroSection/SharedHeroSection';
 
 import {
   ChevronDownIcon,
@@ -53,6 +54,12 @@ function FAQPage() {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
+  const hero = {
+    title: 'Frequently Asked',
+    titleGreen: 'Questions',
+    description: 'Find answers to common questions about our services, appointments, and eye care.'
+  }
+
   return (
     <>
       <Header />
@@ -60,30 +67,11 @@ function FAQPage() {
       <main>
 
         {/* HERO */}
-        <section className="relative min-h-[50vh] flex items-center justify-center">
-
-          <div className="absolute inset-0">
-            <img
-              src="/bg-hero.png"
-              alt="FAQ"
-              className="w-full h-full object-cover"
-            />
-          </div>
-
-          <div className="absolute inset-0 bg-black/70" />
-
-          <div className="relative z-10 text-center px-6">
-            <h1 className="text-4xl md:text-6xl font-bold">
-              Frequently Asked
-              <span className="text-green-500 pl-3">Questions</span>
-            </h1>
-
-            <p className="text-white/70 mt-6 max-w-2xl mx-auto">
-              Find answers to common questions about our services,
-              appointments, and eye care.
-            </p>
-          </div>
-        </section>
+        <SharedHeroSection
+          title={hero.title}
+          titleGreen={hero.titleGreen}
+          description={hero.description}
+        />
 
 
         {/* SEARCH */}
@@ -119,9 +107,8 @@ function FAQPage() {
                   <span className="font-medium">{faq.question}</span>
 
                   <ChevronDownIcon
-                    className={`h-5 w-5 text-green-500 transition ${
-                      activeIndex === index ? "rotate-180" : ""
-                    }`}
+                    className={`h-5 w-5 text-green-500 transition ${activeIndex === index ? "rotate-180" : ""
+                      }`}
                   />
                 </button>
 
@@ -168,7 +155,7 @@ function FAQPage() {
 
 
         {/* CTA */}
-       <CallToAction />
+        <CallToAction />
 
       </main>
 

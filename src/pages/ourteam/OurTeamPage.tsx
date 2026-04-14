@@ -23,6 +23,7 @@ export default OurTeamPage;
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import CallToAction from '../../components/CallToAction';
+import SharedHeroSection from '../../components/SharedHeroSection/SharedHeroSection';
 
 import {
   AcademicCapIcon,
@@ -56,6 +57,12 @@ function OurTeamPage() {
     },
   ];
 
+  const hero = {
+    title: 'Meet Our',
+    titleGreen: 'Team',
+    description: 'Dedicated professionals committed to providing the highest quality eye care and personalized service.'
+  }
+
   return (
     <>
       <Header />
@@ -63,30 +70,11 @@ function OurTeamPage() {
       <main>
 
         {/* HERO */}
-        <section className="relative min-h-[60vh] flex items-center justify-center">
-
-          <div className="absolute inset-0">
-            <img
-              src="/bg-hero.png"
-              alt="Our Team"
-              className="w-full h-full object-cover"
-            />
-          </div>
-
-          <div className="absolute inset-0 bg-black/70" />
-
-          <div className="relative z-10 text-center px-6">
-            <h1 className="text-4xl md:text-6xl font-bold">
-              Meet Our
-              <span className="text-green-500 pl-3">Team</span>
-            </h1>
-
-            <p className="text-white/70 mt-6 max-w-2xl mx-auto">
-              Dedicated professionals committed to providing the highest
-              quality eye care and personalized service.
-            </p>
-          </div>
-        </section>
+        <SharedHeroSection
+          title={hero.title}
+          titleGreen={hero.titleGreen}
+          description={hero.description}
+        />
 
 
         {/* INTRO */}
@@ -192,7 +180,7 @@ function OurTeamPage() {
 
 
         {/* CTA */}
-      <CallToAction />
+        <CallToAction />
 
       </main>
 

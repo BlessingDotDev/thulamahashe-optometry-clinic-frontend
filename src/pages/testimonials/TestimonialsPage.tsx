@@ -3,6 +3,7 @@
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import CallToAction from '../../components/CallToAction';
+import SharedHeroSection from '../../components/SharedHeroSection/SharedHeroSection';
 
 import {
   StarIcon,
@@ -55,6 +56,12 @@ function TestimonialsPage() {
     },
   ];
 
+  const hero = {
+    title: 'Patient',
+    titleGreen: 'Testimonials',
+    description: ' Hear what our patients say about their experience with our professional and caring eye care services.'
+  }
+
   return (
     <>
       <Header />
@@ -62,30 +69,11 @@ function TestimonialsPage() {
       <main>
 
         {/* HERO */}
-        <section className="relative min-h-[60vh] flex items-center justify-center">
-
-          <div className="absolute inset-0">
-            <img
-              src="/bg-hero.png"
-              alt="Testimonials"
-              className="w-full h-full object-cover"
-            />
-          </div>
-
-          <div className="absolute inset-0 bg-black/70" />
-
-          <div className="relative z-10 text-center px-6">
-            <h1 className="text-4xl md:text-6xl font-bold">
-              Patient
-              <span className="text-green-500 pl-3">Testimonials</span>
-            </h1>
-
-            <p className="text-white/70 mt-6 max-w-2xl mx-auto">
-              Hear what our patients say about their experience with our
-              professional and caring eye care services.
-            </p>
-          </div>
-        </section>
+        <SharedHeroSection
+          title={hero.title}
+          titleGreen={hero.titleGreen}
+          description={hero.description}
+        />
 
 
         {/* SUMMARY / STATS */}
@@ -191,7 +179,7 @@ function TestimonialsPage() {
 
 
         {/* CTA */}
-       <CallToAction />
+        <CallToAction />
 
       </main>
 

@@ -25,6 +25,7 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Button from '../../components/Button';
 import CallToAction from '../../components/CallToAction';
+import SharedHeroSection from '../../components/SharedHeroSection/SharedHeroSection';
 
 import {
   EyeIcon,
@@ -76,6 +77,12 @@ function ServicesPage() {
     },
   ];
 
+  const hero = {
+    title: 'Our',
+    titleGreen: 'Services',
+    description: 'Professional, reliable, and modern eye care services designed to keep your vision clear and your eyes healthy.'
+  }
+
   return (
     <>
       <Header />
@@ -83,36 +90,12 @@ function ServicesPage() {
       <main>
 
         {/* HERO SECTION */}
-        <section className="relative min-h-[70vh] flex items-center justify-center">
-
-          <div className="absolute inset-0">
-            <img
-              src="/bg-hero.png"
-              alt="Optometry Services"
-              className="w-full h-full object-cover"
-            />
-          </div>
-
-          <div className="absolute inset-0 bg-black/70" />
-
-          <div className="relative z-10 text-center px-6">
-            <h1 className="text-4xl md:text-6xl font-bold">
-              Our
-              <span className="text-green-500 pl-3">Services</span>
-            </h1>
-
-            <p className="text-white/70 mt-6 max-w-2xl mx-auto">
-              Professional, reliable, and modern eye care services designed
-              to keep your vision clear and your eyes healthy.
-            </p>
-
-            <div className="mt-8">
-              <Button variant="secondary">Book Appointment</Button>
-            </div>
-          </div>
-        </section>
-
-
+        <SharedHeroSection
+          title={hero.title}
+          titleGreen={hero.titleGreen}
+          description={hero.description}
+        />
+        
         {/* SERVICES GRID */}
         <section className="px-6 md:px-12 py-24">
 

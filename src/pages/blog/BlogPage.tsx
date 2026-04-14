@@ -25,6 +25,7 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Button from '../../components/Button';
 import CallToAction from '../../components/CallToAction';
+import SharedHeroSection from '../../components/SharedHeroSection/SharedHeroSection';
 
 import {
   CalendarDaysIcon,
@@ -69,6 +70,12 @@ function BlogPage() {
     },
   ];
 
+  const hero = {
+    title: 'Our',
+    titleGreen: 'Blog',
+    description: '  Expert insights, tips, and guides to help you maintain healthy vision and better eye care.'
+  }
+
   return (
     <>
       <Header />
@@ -76,31 +83,11 @@ function BlogPage() {
       <main>
 
         {/* HERO */}
-        <section className="relative min-h-[60vh] flex items-center justify-center">
-
-          <div className="absolute inset-0">
-            <img
-              src="/bg-hero.png"
-              alt="Optometry Blog"
-              className="w-full h-full object-cover"
-            />
-          </div>
-
-          <div className="absolute inset-0 bg-black/70" />
-
-          <div className="relative z-10 text-center px-6">
-            <h1 className="text-4xl md:text-6xl font-bold">
-              Our
-              <span className="text-green-500 pl-3">Blog</span>
-            </h1>
-
-            <p className="text-white/70 mt-6 max-w-2xl mx-auto">
-              Expert insights, tips, and guides to help you maintain
-              healthy vision and better eye care.
-            </p>
-          </div>
-        </section>
-
+        <SharedHeroSection
+          title={hero.title}
+          titleGreen={hero.titleGreen}
+          description={hero.description}
+        />
 
         {/* SEARCH + FILTER */}
         <section className="px-6 md:px-12 py-16">
