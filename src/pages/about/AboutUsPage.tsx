@@ -23,9 +23,11 @@ export default AboutUsPage;
 
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import Button from '../../components/Button';
 import CallToAction from '../../components/CallToAction';
 import SharedHeroSection from '../../components/SharedHeroSection/SharedHeroSection';
+import Manzini from '../../assets/images/doctors-profile/doctor-1.png';
+import Mkhonto from '../../assets/images/doctors-profile/doctor-2.png';
+import Mthembu from '../../assets/images/doctors-profile/doctor-3.png';
 
 import {
   EyeIcon,
@@ -68,6 +70,24 @@ function AboutUsPage() {
     titleGreen: 'Our Practice',
     description: 'Delivering exceptional eye care with precision, compassion, and modern technology in Pretoria.'
   }
+
+  const doctors = [{
+      id: crypto.randomUUID(),
+      name: 'Dr Manzini',
+      title: 'Optometrist',
+      image: Manzini,
+    }, {
+      id: crypto.randomUUID(),
+      name: 'Dr Mkhonto',
+      title: 'Optometrist',
+      image: Mkhonto,
+    }, {
+      id: crypto.randomUUID(),
+      name: 'Dr Mthembu',
+      title: 'Optometrist',
+      image: Mthembu,
+    }
+  ]
 
   return (
     <>
@@ -152,19 +172,23 @@ function AboutUsPage() {
             with the best eye care experience.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-5xl">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 w-full max-w-5xl">
 
-            {[1, 2, 3].map((member) => (
+            { doctors.map((member) => (
               <div
-                key={member}
+                key={member.id}
                 className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden"
               >
-                <div className="h-64 bg-gray-800" />
+                <img 
+                  src={member.image} 
+                  alt={member.name} 
+                  className="h-80 w-full object-cover object-top" 
+                />
 
                 <div className="p-6 text-center">
-                  <h3>Dr. Name</h3>
+                  <h3>{member.name}</h3>
                   <p className="text-white/60 text-sm mt-2">
-                    Optometrist
+                    {member.title}
                   </p>
                 </div>
               </div>
