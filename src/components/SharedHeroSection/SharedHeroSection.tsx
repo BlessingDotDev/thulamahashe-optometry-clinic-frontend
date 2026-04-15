@@ -1,4 +1,5 @@
 import Button from '../Button';
+import { NavLink } from 'react-router';
 
 function SharedHeroSection({title, titleGreen, description}) {
   return (
@@ -26,9 +27,9 @@ function SharedHeroSection({title, titleGreen, description}) {
           {description}
         </p>
 
-        <div className="mt-8">
-          <Button variant="secondary">Book Appointment</Button>
-        </div>
+        <NavLink to='/booking' >
+          <Button variant="secondary" className="mt-8">Book Appointment</Button>
+        </NavLink>
       </div>
     </section>
   )

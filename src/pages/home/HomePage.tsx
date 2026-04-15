@@ -6,6 +6,7 @@ import {
   EnvelopeIcon, ClockIcon
 } from "@heroicons/react/24/outline";
 import Footer from '../../components/Footer';
+import { NavLink } from "react-router";
 
 function HomePage() {
 
@@ -76,9 +77,9 @@ function HomePage() {
               <h2 className='underline decoration-green-500 my-6'>Your optometry of choice in Thulamahasshe</h2>
             </div>
 
-            <div>
+            <NavLink to="/booking">
               <Button variant='secondary'>BOOK YOUR SELF</Button>
-            </div>
+            </NavLink>
 
             <div className=' mt-24 flex flex-col md:flex-row gap-3 md:gap-8 items-start justify-center'>
 

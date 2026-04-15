@@ -1,4 +1,5 @@
 import Button from './Button';
+import { NavLink } from 'react-router';
 
 function CallToAction() {
   return (
@@ -13,9 +14,9 @@ function CallToAction() {
         Take the first step towards better vision and healthier eyes.
       </p>
 
-      <div className="mt-8">
-        <Button variant="secondary">Book Appointment</Button>
-      </div>
+      <NavLink to="/booking">
+        <Button variant="secondary" className="mt-8">Book Appointment</Button>
+      </NavLink>
 
     </section>
   );
