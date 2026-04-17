@@ -10,11 +10,14 @@ import BookingPage from './pages/booking/BookingPage';
 import FAQPage from './pages/faq/FAQPage';
 import TestimonialsPage from './pages/testimonials/TestimonialsPage';
 import  MedicalAidPage from './pages/medicalaid/MedicalAidPage';
+import ScrollToTop from './components/ScrollToTop';
 
 
 function App() {
   return (
     <>
+      <ScrollToTop />
+      
       <Routes>
         <Route index element={<HomePage />} />
         <Route path='ourteam' element={<OurTeamPage />} />
