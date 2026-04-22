@@ -1,9 +1,9 @@
-type Props = {
+type HeroSectionProps = {
   title: string;
   subtitle: string;
 }
 
-function HeroSection({title, subtitle}: Props) {
+function HeroSection({title, subtitle}: HeroSectionProps) {
   return (
     <section className="relative min-h-screen flex px-8">
 

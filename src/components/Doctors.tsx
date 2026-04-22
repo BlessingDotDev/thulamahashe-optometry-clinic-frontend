@@ -27,7 +27,11 @@ const doctors = [{
 }
 ];
 
-function Doctors({ showfull }) {
+type DoctorsProps = {
+  showfull: boolean
+}
+
+function Doctors({ showfull }: DoctorsProps) {
   return (
     <>
       {

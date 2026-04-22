@@ -1,7 +1,17 @@
 import Button from '../Button';
 import { NavLink } from 'react-router';
 
-function SharedHeroSection({title, titleGreen, description}) {
+type SharedHeroSectionProps = {
+  title: string, 
+  titleGreen: string, 
+  description: string,
+}
+
+function SharedHeroSection({
+  title,
+  titleGreen,
+  description
+}: SharedHeroSectionProps) {
   return (
     <section className="relative min-h-[70vh] flex items-center justify-center">
 
