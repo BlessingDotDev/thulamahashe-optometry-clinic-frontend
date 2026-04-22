@@ -23,6 +23,9 @@ function Header() {
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-lg bg-black/40 border-b border-white/10">
+      <div className="bg-black text-white text-center py-2">
+        Template still in progress...
+      </div>
 
       <div className="flex items-center justify-between px-4 md:px-12 py-4">
 
