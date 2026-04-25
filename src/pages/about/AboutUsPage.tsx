@@ -51,6 +51,7 @@ function AboutUsPage() {
 
   return (
     <>
+      <title>About</title>
       <Header />
 
       <main>

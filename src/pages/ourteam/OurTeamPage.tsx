@@ -22,6 +22,7 @@ function OurTeamPage() {
 
   return (
     <>
+      <title>OurTeam</title>
       <Header />
 
       <main>

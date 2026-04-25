@@ -64,6 +64,7 @@ function TestimonialsPage() {
 
   return (
     <>
+      <title>Testimonials</title>
       <Header />
 
       <main>

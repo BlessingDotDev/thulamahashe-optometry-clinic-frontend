@@ -62,6 +62,7 @@ function FAQPage() {
 
   return (
     <>
+      <title>FAQ</title>
       <Header />
 
       <main>

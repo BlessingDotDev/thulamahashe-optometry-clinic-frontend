@@ -81,6 +81,7 @@ function ContactUsPage() {
 
   return (
     <>
+      <title>ContactUs</title>
       <Header />
 
       <main>

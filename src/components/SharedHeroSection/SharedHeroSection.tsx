@@ -38,7 +38,13 @@ function SharedHeroSection({
         </p>
 
         <NavLink to='/booking' >
-          <Button variant="secondary" className="mt-8">Book Appointment</Button>
+          <Button 
+            variant="secondary" 
+            className="mt-8"
+            title="Make an appointmet"
+          >
+            Book Appointment
+          </Button>
         </NavLink>
       </div>
     </section>

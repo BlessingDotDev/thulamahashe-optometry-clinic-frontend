@@ -38,6 +38,7 @@ function BookingPage() {
 
   return (
     <>
+      <title>Booking</title>
       <Header />
 
       <main>

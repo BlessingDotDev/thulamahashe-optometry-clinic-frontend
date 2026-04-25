@@ -78,6 +78,7 @@ function BlogPage() {
 
   return (
     <>
+      <title>Blog</title>
       <Header />
 
       <main>

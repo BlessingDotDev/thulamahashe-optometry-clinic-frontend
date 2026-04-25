@@ -32,6 +32,7 @@ function MedicalAidPage() {
 
   return (
     <>
+      <title>MedicalAid</title>
       <Header />
 
       <main>

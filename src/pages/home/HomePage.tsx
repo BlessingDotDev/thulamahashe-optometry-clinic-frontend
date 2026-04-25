@@ -57,6 +57,8 @@ function HomePage() {
 
   return (
     <>
+      <title>Thulamahashe Optometry clinic</title>
+      
       <Header />
       <main >
         <section className="relative min-h-screen flex">

@@ -85,6 +85,7 @@ function ServicesPage() {
 
   return (
     <>
+      <title>Services</title>
       <Header />
 
       <main>
