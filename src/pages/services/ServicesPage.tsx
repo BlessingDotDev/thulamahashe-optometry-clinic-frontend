@@ -1,5 +1,3 @@
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
 import CallToAction from '../../components/CallToAction';
 import SharedHeroSection from '../../components/SharedHeroSection/SharedHeroSection';
 
@@ -67,7 +65,6 @@ function ServicesPage() {
   return (
     <>
       <title>Services</title>
-      <Header />
 
       <motion.main
         variants={pageTransition}
@@ -207,8 +204,6 @@ function ServicesPage() {
         <CallToAction />
 
       </motion.main>
-
-      <Footer />
     </>
   );
 }

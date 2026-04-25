@@ -1,5 +1,3 @@
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
 import Button from '../../components/Button';
 import CallToAction from '../../components/CallToAction';
 import SharedHeroSection from '../../components/SharedHeroSection/SharedHeroSection';
@@ -60,7 +58,6 @@ function ContactUsPage() {
   return (
     <>
       <title>ContactUs</title>
-      <Header />
 
       <motion.main
         variants={pageTransition}
@@ -228,8 +225,6 @@ function ContactUsPage() {
         <CallToAction />
 
       </motion.main>
-
-      <Footer />
     </>
   );
 }

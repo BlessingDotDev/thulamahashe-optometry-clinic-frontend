@@ -4,9 +4,7 @@ import {
   MapPinIcon, PhoneIcon,
   EnvelopeIcon, ClockIcon
 } from "@heroicons/react/24/outline";
-import Header from '../../components/Header';
 import Button from '../../components/Button';
-import Footer from '../../components/Footer';
 import { motion } from 'framer-motion';
 
 function HomePage() {
@@ -59,8 +57,7 @@ function HomePage() {
   return (
     <>
       <title>Thulamahashe Optometry clinic</title>
-      
-      <Header />    
+
       <motion.main 
         initial={{opacity: 0, y: 40}}
         animate={{opacity: 1, y: 0}}
@@ -271,8 +268,6 @@ function HomePage() {
 
 
       </motion.main>
-
-      <Footer />
     </>
   );
 }

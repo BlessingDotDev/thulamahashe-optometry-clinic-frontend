@@ -1,6 +1,4 @@
 
-'use client';
-
 import { motion } from 'framer-motion'
 import {
   EyeIcon,
@@ -8,8 +6,6 @@ import {
   SparklesIcon,
   ShieldCheckIcon,
 } from "@heroicons/react/24/outline";
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
 import CallToAction from '../../components/CallToAction';
 import SharedHeroSection from '../../components/SharedHeroSection/SharedHeroSection';
 import Doctors from '../../components/Doctors';
@@ -54,7 +50,6 @@ function AboutUsPage() {
   return (
     <>
       <title>About</title>
-      <Header />
 
       <motion.main
         variants={pageTransition}
@@ -153,8 +148,6 @@ function AboutUsPage() {
         <CallToAction />
 
       </motion.main>
-
-      <Footer />
     </>
   );
 }

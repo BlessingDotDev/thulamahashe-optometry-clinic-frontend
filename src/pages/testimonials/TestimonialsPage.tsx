@@ -1,7 +1,3 @@
-'use client';
-
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
 import CallToAction from '../../components/CallToAction';
 import SharedHeroSection from '../../components/SharedHeroSection/SharedHeroSection';
 
@@ -70,8 +66,7 @@ function TestimonialsPage() {
   return (
     <>
       <title>Testimonials</title>
-      <Header />
-
+      
       <motion.main
         variants={pageTransition}
         initial="initial"
@@ -194,8 +189,6 @@ function TestimonialsPage() {
         <CallToAction />
 
       </motion.main>
-
-      <Footer />
     </>
   );
 }

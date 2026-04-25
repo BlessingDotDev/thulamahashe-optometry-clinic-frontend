@@ -1,7 +1,3 @@
-'use client';
-
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
 import CallToAction from '../../components/CallToAction';
 import SharedHeroSection from '../../components/SharedHeroSection/SharedHeroSection';
 import Doctors from '../../components/Doctors';
@@ -26,8 +22,6 @@ function OurTeamPage() {
   return (
     <>
       <title>OurTeam</title>
-      <Header />
-
       <motion.main
         variants={pageTransition}
         initial="initial"
@@ -120,8 +114,6 @@ function OurTeamPage() {
         <CallToAction />
 
       </motion.main>
-
-      <Footer />
     </>
   );
 }

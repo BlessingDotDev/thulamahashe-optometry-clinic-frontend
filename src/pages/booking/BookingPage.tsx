@@ -1,7 +1,3 @@
-'use client';
-
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
 import Button from '../../components/Button';
 import CallToAction from '../../components/CallToAction';
 import SharedHeroSection from '../../components/SharedHeroSection/SharedHeroSection';
@@ -41,7 +37,6 @@ function BookingPage() {
   return (
     <>
       <title>Booking</title>
-      <Header />
 
       <motion.main
         variants={pageTransition}
@@ -244,8 +239,6 @@ function BookingPage() {
         <CallToAction />
 
       </motion.main>
-
-      <Footer />
     </>
   );
 }

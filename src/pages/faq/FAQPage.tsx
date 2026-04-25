@@ -1,8 +1,4 @@
-'use client';
-
 import { useState } from 'react';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
 import Button from '../../components/Button';
 import CallToAction from '../../components/CallToAction';
 import SharedHeroSection from '../../components/SharedHeroSection/SharedHeroSection';
@@ -65,7 +61,6 @@ function FAQPage() {
   return (
     <>
       <title>FAQ</title>
-      <Header />
 
       <motion.main
         variants={pageTransition}
@@ -166,8 +161,6 @@ function FAQPage() {
         <CallToAction />
 
       </motion.main>
-
-      <Footer />
     </>
   );
 }

@@ -1,7 +1,3 @@
-'use client';
-
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
 import CallToAction from '../../components/CallToAction';
 import SharedHeroSection from '../../components/SharedHeroSection/SharedHeroSection';
 
@@ -35,7 +31,6 @@ function MedicalAidPage() {
   return (
     <>
       <title>MedicalAid</title>
-      <Header />
 
       <motion.main
         variants={pageTransition}
@@ -162,8 +157,6 @@ function MedicalAidPage() {
         <CallToAction />
 
       </motion.main>
-
-      <Footer />
     </>
   );
 }
