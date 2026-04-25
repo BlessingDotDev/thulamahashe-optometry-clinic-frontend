@@ -14,6 +14,8 @@ import {
 } from "@heroicons/react/24/outline";
 
 import { SiWhatsapp } from "react-icons/si";
+import { motion } from 'framer-motion';
+import { pageTransition } from '../../data/animaions';
 
 function BookingPage() {
 
@@ -41,7 +43,13 @@ function BookingPage() {
       <title>Booking</title>
       <Header />
 
-      <main>
+      <motion.main
+        variants={pageTransition}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        transition={{duration: 0.5}}
+      >
 
         {/* HERO */}
         <SharedHeroSection
@@ -235,7 +243,7 @@ function BookingPage() {
         {/* CTA */}
         <CallToAction />
 
-      </main>
+      </motion.main>
 
       <Footer />
     </>

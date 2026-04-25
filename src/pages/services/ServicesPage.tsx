@@ -1,26 +1,3 @@
-/*import Header from '../../components/Header';
-import Footer from '../../components/Footer';
-import HeroSection from '../../components/HeroSection/HeroSection';
-
-function ServicesPage() {
-  return (
-    <>
-      <Header />
-
-      <main>
-        <HeroSection title='Our Servies' subtitle='Get the best price, best care' />
-      </main>    
-
-      <Footer />
-    </>
-  );
-}
-
-export default ServicesPage;
-*/
-
-'use client';
-
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import CallToAction from '../../components/CallToAction';
@@ -34,6 +11,11 @@ import {
   ShieldCheckIcon,
   UserGroupIcon,
 } from "@heroicons/react/24/outline";
+
+
+import { motion } from "framer-motion";
+import { pageTransition } from "../../data/animaions";
+
 
 function ServicesPage() {
 
@@ -87,7 +69,13 @@ function ServicesPage() {
       <title>Services</title>
       <Header />
 
-      <main>
+      <motion.main
+        variants={pageTransition}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        transition={{ duration: 0.5 }}
+      >
 
         {/* HERO SECTION */}
         <SharedHeroSection
@@ -95,7 +83,7 @@ function ServicesPage() {
           titleGreen={hero.titleGreen}
           description={hero.description}
         />
-        
+
         {/* SERVICES GRID */}
         <section className="px-6 md:px-12 py-24">
 
@@ -218,7 +206,7 @@ function ServicesPage() {
         {/* CTA */}
         <CallToAction />
 
-      </main>
+      </motion.main>
 
       <Footer />
     </>

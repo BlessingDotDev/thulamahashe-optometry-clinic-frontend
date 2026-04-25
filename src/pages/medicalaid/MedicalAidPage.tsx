@@ -10,6 +10,8 @@ import {
   ClipboardDocumentCheckIcon,
   BanknotesIcon,
 } from "@heroicons/react/24/outline";
+import { motion } from "framer-motion";
+import { pageTransition } from "../../data/animaions";
 
 function MedicalAidPage() {
 
@@ -35,7 +37,13 @@ function MedicalAidPage() {
       <title>MedicalAid</title>
       <Header />
 
-      <main>
+      <motion.main
+        variants={pageTransition}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        transition={{ duration: 0.5 }}
+      >
 
         {/* HERO */}
         <SharedHeroSection
@@ -153,7 +161,7 @@ function MedicalAidPage() {
         {/* CTA */}
         <CallToAction />
 
-      </main>
+      </motion.main>
 
       <Footer />
     </>

@@ -10,6 +10,8 @@ import SharedHeroSection from '../../components/SharedHeroSection/SharedHeroSect
 import {
   ChevronDownIcon,
 } from "@heroicons/react/24/outline";
+import { motion } from "framer-motion";
+import { pageTransition } from "../../data/animaions";
 
 function FAQPage() {
 
@@ -65,7 +67,13 @@ function FAQPage() {
       <title>FAQ</title>
       <Header />
 
-      <main>
+      <motion.main
+        variants={pageTransition}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        transition={{ duration: 0.5 }}
+      >
 
         {/* HERO */}
         <SharedHeroSection
@@ -157,7 +165,7 @@ function FAQPage() {
         {/* CTA */}
         <CallToAction />
 
-      </main>
+      </motion.main>
 
       <Footer />
     </>

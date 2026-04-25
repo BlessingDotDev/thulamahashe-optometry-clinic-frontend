@@ -1,12 +1,13 @@
-import Header from '../../components/Header';
-import Button from '../../components/Button';
+import { NavLink } from "react-router";
 import {
   ChatBubbleLeftRightIcon,
   MapPinIcon, PhoneIcon,
   EnvelopeIcon, ClockIcon
 } from "@heroicons/react/24/outline";
+import Header from '../../components/Header';
+import Button from '../../components/Button';
 import Footer from '../../components/Footer';
-import { NavLink } from "react-router";
+import { motion } from 'framer-motion';
 
 function HomePage() {
 
@@ -59,8 +60,13 @@ function HomePage() {
     <>
       <title>Thulamahashe Optometry clinic</title>
       
-      <Header />
-      <main >
+      <Header />    
+      <motion.main 
+        initial={{opacity: 0, y: 40}}
+        animate={{opacity: 1, y: 0}}
+        exit={{opacity: 0, y: -40}}
+        transition={{duration: 0.5}}
+      >
         <section className="relative min-h-screen flex">
 
           <div className="absolute inset-0" >
@@ -264,7 +270,7 @@ function HomePage() {
         </section>
 
 
-      </main>
+      </motion.main>
 
       <Footer />
     </>

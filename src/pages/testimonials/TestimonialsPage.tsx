@@ -9,6 +9,11 @@ import {
   StarIcon,
 } from "@heroicons/react/24/solid";
 
+
+import { motion } from "framer-motion";
+import { pageTransition } from "../../data/animaions";
+
+
 function TestimonialsPage() {
 
   const testimonials = [
@@ -67,7 +72,13 @@ function TestimonialsPage() {
       <title>Testimonials</title>
       <Header />
 
-      <main>
+      <motion.main
+        variants={pageTransition}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        transition={{ duration: 0.5 }}
+      >
 
         {/* HERO */}
         <SharedHeroSection
@@ -182,7 +193,7 @@ function TestimonialsPage() {
         {/* CTA */}
         <CallToAction />
 
-      </main>
+      </motion.main>
 
       <Footer />
     </>

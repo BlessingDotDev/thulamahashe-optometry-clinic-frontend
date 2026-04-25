@@ -12,6 +12,9 @@ import {
   HeartIcon,
 } from "@heroicons/react/24/outline";
 
+import { motion } from "framer-motion";
+import { pageTransition } from "../../data/animaions";
+
 function OurTeamPage() {
 
   const hero = {
@@ -25,7 +28,13 @@ function OurTeamPage() {
       <title>OurTeam</title>
       <Header />
 
-      <main>
+      <motion.main
+        variants={pageTransition}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        transition={{ duration: 0.5 }}
+      >
 
         {/* HERO */}
         <SharedHeroSection
@@ -55,11 +64,11 @@ function OurTeamPage() {
         {/* TEAM GRID */}
         <section className="px-6 md:px-12 pb-24">
 
-        <div className="grid grid-cols-1 m-auto sm:grid-cols-2 md:grid-cols-3 gap-8 w-full max-w-6xl">
-        
-                    <Doctors showfull={true} />
-        
-                  </div>
+          <div className="grid grid-cols-1 m-auto sm:grid-cols-2 md:grid-cols-3 gap-8 w-full max-w-6xl">
+
+            <Doctors showfull={true} />
+
+          </div>
         </section>
 
 
@@ -110,7 +119,7 @@ function OurTeamPage() {
         {/* CTA */}
         <CallToAction />
 
-      </main>
+      </motion.main>
 
       <Footer />
     </>

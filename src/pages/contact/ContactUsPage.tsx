@@ -1,26 +1,3 @@
-/*import Header from '../../components/Header';
-import Footer from '../../components/Footer';
-import HeroSection from '../../components/HeroSection/HeroSection';
-
-function ContactUsPage() {
-  return (
-    <>
-      <Header />
-
-      <main>
-        <HeroSection title='contact' subtitle='get in touch with us' />
-      </main>    
-
-      <Footer />
-    </>
-  );
-}
-
-export default ContactUsPage;
-*/
-
-'use client';
-
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Button from '../../components/Button';
@@ -35,6 +12,8 @@ import {
 } from "@heroicons/react/24/outline";
 
 import { SiWhatsapp } from "react-icons/si";
+import { motion } from "framer-motion";
+import { pageTransition } from "../../data/animaions";
 
 function ContactUsPage() {
 
@@ -72,7 +51,6 @@ function ContactUsPage() {
     { id: 4, day: "Public Holidays", time: "Closed" },
   ];
 
-
   const hero = {
     title: 'Contact',
     titleGreen: 'Us',
@@ -84,7 +62,13 @@ function ContactUsPage() {
       <title>ContactUs</title>
       <Header />
 
-      <main>
+      <motion.main
+        variants={pageTransition}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        transition={{duration: 0.5}}
+      >
 
         {/* HERO */}
         <SharedHeroSection
@@ -243,7 +227,7 @@ function ContactUsPage() {
         {/* CTA */}
         <CallToAction />
 
-      </main>
+      </motion.main>
 
       <Footer />
     </>

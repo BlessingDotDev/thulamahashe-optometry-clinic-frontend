@@ -1,26 +1,3 @@
-/*import Header from '../../components/Header';
-import Footer from '../../components/Footer';
-import HeroSection from '../../components/HeroSection/HeroSection';
-
-function BlogPage() {
-  return (
-    <>
-      <Header />
-
-      <main>
-        <HeroSection title='Blog' subtitle='Stay in touch' />
-      </main>    
-
-      <Footer />
-    </>
-  );
-}
-
-export default BlogPage;
-
-*/
-'use client';
-
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Button from '../../components/Button';
@@ -32,6 +9,8 @@ import {
   ClockIcon,
   TagIcon,
 } from "@heroicons/react/24/outline";
+import { motion } from "framer-motion";
+import { pageTransition } from '../../data/animaions';
 
 function BlogPage() {
 
@@ -73,7 +52,7 @@ function BlogPage() {
   const hero = {
     title: 'Our',
     titleGreen: 'Blog',
-    description: '  Expert insights, tips, and guides to help you maintain healthy vision and better eye care.'
+    description: '  Expert insights, tips, and guides to help you motion.maintain healthy vision and better eye care.'
   }
 
   return (
@@ -81,7 +60,13 @@ function BlogPage() {
       <title>Blog</title>
       <Header />
 
-      <main>
+      <motion.main
+        variants={pageTransition}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        transition={{duration: 0.5}}
+      >
 
         {/* HERO */}
         <SharedHeroSection
@@ -206,7 +191,7 @@ function BlogPage() {
 
         {/* CTA */}
         <CallToAction />
-      </main>
+      </motion.main>
 
       <Footer />
     </>
