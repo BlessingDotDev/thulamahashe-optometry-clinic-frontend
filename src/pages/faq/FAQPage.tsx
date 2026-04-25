@@ -74,7 +74,6 @@ function FAQPage() {
           description={hero.description}
         />
 
-
         {/* SEARCH */}
         <section className="px-6 md:px-12 py-12">
 
