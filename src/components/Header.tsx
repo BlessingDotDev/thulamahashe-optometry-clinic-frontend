@@ -16,6 +16,7 @@ import {
 } from '@heroicons/react/24/outline';
 
 import { NavLink } from 'react-router';
+import { motion } from 'framer-motion';
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -58,13 +59,34 @@ function Header() {
             </button>
 
             {moreOpen && (
-              <div className="absolute right-0 mt-3 w-48 bg-black/90 border border-white/10 rounded-xl overflow-hidden">
-                <NavLink to="/ourteam" className="block px-4 py-2 hover:bg-white/10">Our Team</NavLink>
-                <NavLink to="/blog" className="block px-4 py-2 hover:bg-white/10">Blog</NavLink>
-                <NavLink to="/testimonials" className="block px-4 py-2 hover:bg-white/10">Testimonials</NavLink>
-                <NavLink to="/faq" className="block px-4 py-2 hover:bg-white/10">FAQ</NavLink>
-                <NavLink to="/medicalaid" className="block px-4 py-2 hover:bg-white/10">Medical Aid</NavLink>
-              </div>
+              <motion.div 
+                className="absolute right-0 mt-3 w-48 bg-black/90 border border-white/10 rounded-xl overflow-hidden"
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: 'auto', opacity: 1 }}
+                transition={{ duration: 0.4}}
+               
+              >
+                <NavLink 
+                  onClick={() => setMoreOpen(!moreOpen)} 
+                  to="/ourteam" 
+                  className="block px-4 py-2 hover:bg-white/10">Our Team</NavLink>
+                <NavLink 
+                  onClick={() => setMoreOpen(!moreOpen)} 
+                  to="/blog" 
+                  className="block px-4 py-2 hover:bg-white/10">Blog</NavLink>
+                <NavLink 
+                  onClick={() => setMoreOpen(!moreOpen)} 
+                  to="/testimonials" 
+                  className="block px-4 py-2 hover:bg-white/10">Testimonials</NavLink>
+                <NavLink 
+                  onClick={() => setMoreOpen(!moreOpen)} 
+                  to="/faq" 
+                  className="block px-4 py-2 hover:bg-white/10">FAQ</NavLink>
+                <NavLink 
+                  onClick={() => setMoreOpen(!moreOpen)} 
+                  to="/medicalaid" 
+                  className="block px-4 py-2 hover:bg-white/10">Medical Aid</NavLink>
+              </motion.div>
             )}
           </div>
 
